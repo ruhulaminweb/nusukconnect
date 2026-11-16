@@ -1,0 +1,20 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'com.nusukconnect.companion'
+    compileSdk 36
+    buildToolsVersion '36.0.0'
+    defaultConfig {
+        applicationId 'com.nusukconnect.companion'
+        minSdk 26
+        targetSdk 34
+        versionCode 32
+        versionName '0.4.23'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+        coreLibraryDesugaringEnabled true
+    }
+    buildTypes { release { minifyEnabled false } }
+}
+dependencies { coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4' }

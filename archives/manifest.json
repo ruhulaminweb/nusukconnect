@@ -1,0 +1,32 @@
+﻿[
+    {
+        "file":  "NusukConnect-0.4.12.apk",
+        "metadata":  "package: name=\u0027com.nusukconnect.companion\u0027 versionCode=\u002721\u0027 versionName=\u00270.4.12\u0027 platformBuildVersionName=\u002716\u0027 platformBuildVersionCode=\u002736\u0027 compileSdkVersion=\u002736\u0027 compileSdkVersionCodename=\u002716\u0027",
+        "sha256":  "84a64850aa819e222c7d85d24cc07500626e6fd55d283fa08108c1291c7bd876"
+    },
+    {
+        "file":  "NusukConnect-0.4.13.apk",
+        "metadata":  "package: name=\u0027com.nusukconnect.companion\u0027 versionCode=\u002722\u0027 versionName=\u00270.4.13\u0027 platformBuildVersionName=\u002716\u0027 platformBuildVersionCode=\u002736\u0027 compileSdkVersion=\u002736\u0027 compileSdkVersionCodename=\u002716\u0027",
+        "sha256":  "d7fd19fb4b160f682eb068e1c52f38d6bc6adcd82ecba61f6bbb30d4751ba9ed"
+    },
+    {
+        "file":  "NusukConnect-0.4.14.apk",
+        "metadata":  "package: name=\u0027com.nusukconnect.companion\u0027 versionCode=\u002727\u0027 versionName=\u00270.4.18\u0027 platformBuildVersionName=\u002716\u0027 platformBuildVersionCode=\u002736\u0027 compileSdkVersion=\u002736\u0027 compileSdkVersionCodename=\u002716\u0027",
+        "sha256":  "ec3de22b5111a1506884a3cd50a999fbeac9155dc5becc3d6a7aa9088228265e"
+    },
+    {
+        "file":  "NusukConnect-0.4.20.apk",
+        "metadata":  "package: name=\u0027com.nusukconnect.companion\u0027 versionCode=\u002729\u0027 versionName=\u00270.4.20\u0027 platformBuildVersionName=\u002716\u0027 platformBuildVersionCode=\u002736\u0027 compileSdkVersion=\u002736\u0027 compileSdkVersionCodename=\u002716\u0027",
+        "sha256":  "e99c564141a77db097580c930c36a8c50a4042846bee66f057fbb2499afcbdd8"
+    },
+    {
+        "file":  "NusukConnect-0.4.22.apk",
+        "metadata":  "package: name=\u0027com.nusukconnect.companion\u0027 versionCode=\u002731\u0027 versionName=\u00270.4.22\u0027 platformBuildVersionName=\u002716\u0027 platformBuildVersionCode=\u002736\u0027 compileSdkVersion=\u002736\u0027 compileSdkVersionCodename=\u002716\u0027",
+        "sha256":  "bc06f6fae67b41b1ea33449c5430c837ae0011e3334b5b11248657dff2819b9c"
+    },
+    {
+        "file":  "NusukConnect-0.4.23.apk",
+        "metadata":  "package: name=\u0027com.nusukconnect.companion\u0027 versionCode=\u002732\u0027 versionName=\u00270.4.23\u0027 platformBuildVersionName=\u002716\u0027 platformBuildVersionCode=\u002736\u0027 compileSdkVersion=\u002736\u0027 compileSdkVersionCodename=\u002716\u0027",
+        "sha256":  "203fe7009d32ba48f149d046d9b1876bc66f5de03f2ba4e763eeba2a54b49e93"
+    }
+]

@@ -1,0 +1,7 @@
+buildscript {
+    configurations.classpath.resolutionStrategy.eachDependency {
+        // Keep the Android plugin's Kotlin runtime on a consistent patch release.
+        if (requested.group == 'org.jetbrains.kotlin' && requested.name in ['kotlin-stdlib', 'kotlin-reflect']) useVersion '2.2.21'
+    }
+}
+plugins { id 'com.android.application' version '8.13.1' apply false }

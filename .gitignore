@@ -1,0 +1,7 @@
+/.gradle/
+/build/
+/app/build/
+/local.properties
+/reference/
+/build-diagnostic.log
+/dist/
