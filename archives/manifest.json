@@ -28,5 +28,10 @@
         "file":  "NusukConnect-0.4.23.apk",
         "metadata":  "package: name=\u0027com.nusukconnect.companion\u0027 versionCode=\u002732\u0027 versionName=\u00270.4.23\u0027 platformBuildVersionName=\u002716\u0027 platformBuildVersionCode=\u002736\u0027 compileSdkVersion=\u002736\u0027 compileSdkVersionCodename=\u002716\u0027",
         "sha256":  "203fe7009d32ba48f149d046d9b1876bc66f5de03f2ba4e763eeba2a54b49e93"
+    },
+    {
+        "file":  "NusukConnect-0.4.24.apk",
+        "metadata":  "package: name=\u0027com.nusukconnect.companion\u0027 versionCode=\u002733\u0027 versionName=\u00270.4.24\u0027 platformBuildVersionName=\u002716\u0027 platformBuildVersionCode=\u002736\u0027 compileSdkVersion=\u002736\u0027 compileSdkVersionCodename=\u002716\u0027",
+        "sha256":  "cf972c4c98f35357e9c0bee154612c821ddd06be157bec603ae61ae01ff870bc"
     }
 ]

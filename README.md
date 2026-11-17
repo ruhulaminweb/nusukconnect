@@ -1,4 +1,6 @@
-# NusukConnec 0.4.23
+# NusukConnect 0.4.24
+
+Corrects the NusukConnect name throughout the launcher, Home/About pages, Accessibility labels, notifications and messages, and improves banner spelling and punctuation.
 
 Completes pending-code recovery when the key counter is unreadable, a question is already open, or a no-key popup appears. A missing result on the Keys/code form is left unconfirmed after 15 seconds and a different code is generated. Door selection retries after three seconds when a category tap leaves the category page open. Tabs and existing settings are retained.
 
@@ -10,7 +12,7 @@ When resuming a pending code result on Nusuk Home, stop at Start the challenge a
 
 Recognizes Nusuk's “The entered code is not correct” rejection, including wrapped text. The rejected submission is recorded, NusukCodes generates another code, and automation returns to the Keys form instead of timing out at CODE_RESULT.
 
-Android companion for Nusuk, Nusuk Codes by Arshad and the ChatGPT Android app. Package: `com.nusukconnect.companion`. Separate from the AzureOps Flutter project.
+Android companion for Nusuk, NusukCodes by Arshad and the ChatGPT Android app. Package: `com.nusukconnect.companion`. Separate from the AzureOps Flutter project.
 
 ## ChatGPT Temporary Chat only
 
@@ -57,9 +59,9 @@ The Yes/No setting itself retains its meaning: No means fully automatic; Yes ena
 ## Setup and privacy
 
 - Install `dist/NusukConnect-debug.apk` and enable NusukConnect automation in Android Accessibility settings.
-- Install/sign into ChatGPT yourself. Enable **Ask ChatGPT in Temporary Chat** in NusukConnect.
+- Install and sign in to ChatGPT yourself. Enable **Ask ChatGPT in Temporary Chat** in NusukConnect.
 - Use English in the target apps. Keep the phone unlocked and screen on.
-- The service can operate Nusuk, Nusuk Codes and ChatGPT. Only quiz questions and choices are put in ChatGPT; generated codes and passwords are not sent.
+- The service can operate Nusuk, NusukCodes and ChatGPT. Only quiz questions and choices are put in ChatGPT; generated codes and passwords are not sent.
 - ChatGPT manages Temporary Chat under its own settings. This is not a claim of zero server retention.
 - Local logs record workflow stages and the selected answer, not the full ChatGPT conversation or account screen.
 - Nusuk has repeatedly refused to open while USB debugging was enabled. Disconnect/disable debugging for standalone trials. No restriction is bypassed.

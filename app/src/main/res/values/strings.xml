@@ -1,3 +1,5 @@
 <resources>
-    <string name="service_description">Operates Nusuk, Nusuk Codes and ChatGPT. AI mode verifies Temporary Chat, sends the quiz question and four choices, reads the numbered reply and returns to select and submit the choice in Nusuk. It does not open Google or reference websites. If ChatGPT is unavailable it tries a local guess. Sign in to ChatGPT yourself. Generated codes and passwords are not sent. Disable this service at any time in Accessibility settings.</string>
+    <string name="app_name">NusukConnect</string>
+    <string name="automation_label">NusukConnect automation</string>
+    <string name="service_description">Operates Nusuk, NusukCodes and ChatGPT. AI mode verifies Temporary Chat, sends the quiz question and four choices, reads the numbered reply and returns to select and submit the choice in Nusuk. It does not open Google or reference websites. If ChatGPT is unavailable it tries a local guess. Sign in to ChatGPT yourself. Generated codes and passwords are not sent. Disable this service at any time in Accessibility settings.</string>
 </resources>

@@ -60,7 +60,7 @@ public final class CompanionService extends AccessibilityService {
         enteredAt=SystemClock.elapsedRealtime();
         running=true;
         // No wake-up flag is used: this only prevents timeout after the user has unlocked the phone.
-        screenLock=power.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK,"NusukConnec:activeRun");
+        screenLock=power.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK,"NusukConnect:activeRun");
         screenLock.setReferenceCounted(false);screenLock.acquire(6*60*60*1000L);
         store.status("Selected task: "+Rules.taskName(mode));
         boolean reusableCode=!Rules.limitReached(limitEnabled,store.number("attempts",0),target) && !store.get("code","").isEmpty()
@@ -91,7 +91,7 @@ public final class CompanionService extends AccessibilityService {
         releaseScreen();
         if (store==null) store=new Store(this);
         store.status(why);
-        DailyReceiver.notify(this,"NusukConnec paused",why,false);
+        DailyReceiver.notify(this,"NusukConnect paused",why,false);
     }
     private void setStage(String next) {
         if (stage.equals(next)) return;
@@ -100,7 +100,7 @@ public final class CompanionService extends AccessibilityService {
         if(next.equals("QUESTION")) {quizScan=new QuizScan();stableQuiz="";}
         stage=next; enteredAt=SystemClock.elapsedRealtime();
         store.status(next.replace('_',' ').toLowerCase(Locale.ROOT));
-        DailyReceiver.notify(this,"NusukConnec running",store.number("accepted",0)+" codes accepted · "+store.number("correct",0)+" correct answers. Tap Stop to pause.",true);
+        DailyReceiver.notify(this,"NusukConnect running",store.number("accepted",0)+" codes accepted · "+store.number("correct",0)+" correct answers. Tap Stop to pause.",true);
     }
     private void nextCode() {
         if (Rules.limitReached(limitEnabled,store.number("attempts",0),target)) { pause("Daily code limit reached. Accepted "+store.number("accepted",0)+" of "+store.number("attempts",0)+" attempts."); return; }
@@ -195,7 +195,7 @@ public final class CompanionService extends AccessibilityService {
             case "SOURCE_READ": {
                 String found=Rules.code(labels);
                 if (found!=null && !found.equals(previousCode)) {
-                    if (store.hasCode(found)) { pause("The code generator returned a code already submitted by NusukConnec. No duplicate was sent."); return; }
+                    if (store.hasCode(found)) { pause("The code generator returned a code already submitted by NusukConnect. No duplicate was sent."); return; }
                     if(!click(nodes,"Copy Code"))break;
                     code=found; store.put("code",code); setStage("NAV_KEYS"); launch(NUSUK);
                     store.generated(code);
@@ -244,7 +244,7 @@ public final class CompanionService extends AccessibilityService {
                     if (mode==1) nextCode(); else setStage("NAV_QUIZ");
                 } else if (Rules.rejectedCode(screen)) {
                     store.rejectCode();
-                    store.status("Code rejected by Nusuk. Generating a fresh code in Nusuk Codes."); nextCode();
+                    store.status("Code rejected by Nusuk. Generating a fresh code in NusukCodes."); nextCode();
                 }
                 else {
                     String recovery=Rules.codeResultRecoveryStage(screen,quizQuestion,mode,visibleKeyCount(nodes),SystemClock.elapsedRealtime()-enteredAt);
@@ -536,7 +536,7 @@ public final class CompanionService extends AccessibilityService {
         approvalToken=UUID.randomUUID().toString();setStage("CONFIRM_ANSWER");
         store.status("Waiting for your Yes/No confirmation before submitting: "+selectedAnswer);
         try {startActivity(new Intent(this,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP));}
-        catch(RuntimeException ignored) {DailyReceiver.notify(this,"Answer confirmation needed","Open NusukConnec to approve or decline submission.",true);}
+        catch(RuntimeException ignored) {DailyReceiver.notify(this,"Answer confirmation needed","Open NusukConnect to approve or decline submission.",true);}
     }
     void testAnswerConfirmation() {
         if(running)throw new IllegalStateException("Stop the active run before testing confirmation.");

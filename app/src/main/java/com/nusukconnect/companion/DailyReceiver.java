@@ -38,7 +38,7 @@ public final class DailyReceiver extends BroadcastReceiver {
     }
     static void notify(Context c,String title,String message,boolean running) {
         NotificationManager nm=c.getSystemService(NotificationManager.class);
-        nm.createNotificationChannel(new NotificationChannel("runs","NusukConnec activity",NotificationManager.IMPORTANCE_DEFAULT));
+        nm.createNotificationChannel(new NotificationChannel("runs","NusukConnect activity",NotificationManager.IMPORTANCE_DEFAULT));
         PendingIntent open=PendingIntent.getActivity(c,0,new Intent(c,MainActivity.class),PendingIntent.FLAG_UPDATE_CURRENT|PendingIntent.FLAG_IMMUTABLE);
         Notification.Builder b=new Notification.Builder(c,"runs").setSmallIcon(com.nusukconnect.companion.R.drawable.ic_launcher)
             .setContentTitle(title).setContentText(message).setStyle(new Notification.BigTextStyle().bigText(message))

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.24 (versionCode 33)
+
+- Correct the name to NusukConnect throughout the current app and documentation.
+- Share the launcher/Home app-name resource and correct Accessibility labels, notifications and prompts.
+- Correct the Home banner's plurals, capitalization and punctuation.
+
 ## 0.4.23 (versionCode 32)
 
 - Resume door selection even if the accessibility key counter is unreadable.

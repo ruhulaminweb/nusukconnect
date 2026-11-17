@@ -10,6 +10,7 @@ These original APK files are preserved byte-for-byte. See manifest.json for embe
 | NusukConnect-0.4.20.apk | 0.4.20 | 29 |
 | NusukConnect-0.4.22.apk | 0.4.22 | 31 |
 | NusukConnect-0.4.23.apk | 0.4.23 | 32 |
+| NusukConnect-0.4.24.apk | 0.4.24 | 33 |
 
 The 0.4.14 filename does not identify its actual Android version. It has not been renamed or represented as a verified 0.4.14 build. Historical APKs do not establish matching historical source commits, so they do not receive fabricated source tags.
 

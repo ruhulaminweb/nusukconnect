@@ -68,10 +68,10 @@ public final class MainActivity extends Activity {
     }
     private void buildHome() {
         usePage(HOME);
-        TextView brand=text("NusukConnec",30,GREEN);brand.setTypeface(null,Typeface.BOLD);page.addView(brand);
+        TextView brand=text(getString(R.string.app_name),30,GREEN);brand.setTypeface(null,Typeface.BOLD);page.addView(brand);
         space(page,4);page.addView(text("By ruhulamin34@gmail.com",14,MUTED));
-        space(page,14);TextView title=text("Your task : done by Apps",22,INK);title.setTypeface(null,Typeface.BOLD);page.addView(title);
-        space(page,6);page.addView(text("Generate Code, Add Keys, Find Quiz Answer through ChatGPT and Submit",15,MUTED));space(page,20);
+        space(page,14);TextView title=text("Your task: done by apps",22,INK);title.setTypeface(null,Typeface.BOLD);page.addView(title);
+        space(page,6);page.addView(text("Generate codes, add keys, find quiz answers through ChatGPT, and submit.",15,MUTED));space(page,20);
         LinearLayout stateCard=card();connection=text("Checking connection…",13,GREEN);connection.setTypeface(null,Typeface.BOLD);stateCard.addView(connection);
         space(stateCard,8);status=text("Ready",18,INK);stateCard.addView(status);space(stateCard,12);counts=text("",14,MUTED);stateCard.addView(counts);space(page,16);
         LinearLayout controls=card();heading(controls,"Ready when you are");homeTask=text("",14,MUTED);controls.addView(homeTask);
@@ -131,7 +131,7 @@ public final class MainActivity extends Activity {
         confirmAnswer=spinner(new String[]{"No","Yes"});confirmAnswer.setSelection(store.flag("confirmAnswer")?1:0);review.addView(confirmAnswer);
         review.addView(text("No submits automatically. Yes asks before each submission. In that dialog, No returns to Nusuk so you can change the suggestion and submit yourself. Automation continues after your result.",13,MUTED));space(page,16);
         LinearLayout ai=card();heading(ai,"ChatGPT");online=new Switch(this);online.setText("Ask ChatGPT in Temporary Chat");online.setTextColor(INK);online.setChecked(store.online());ai.addView(online);
-        ai.addView(text("Sends the question and four choices only after verifying Temporary Chat. No Google or reference-site lookup is used. Sign into ChatGPT yourself.",13,MUTED));space(ai,8);
+        ai.addView(text("Sends the question and four choices only after verifying Temporary Chat. No Google or reference-site lookup is used. Sign in to ChatGPT yourself.",13,MUTED));space(ai,8);
         ai.addView(text("If ChatGPT is unavailable or does not return a usable answer within about a minute, the app tries a local guess and continues after either quiz result. AI answers can be wrong.",13,MUTED));space(page,16);
         LinearLayout schedule=card();heading(schedule,"Daily routine");daily=new Switch(this);daily.setText("Enable daily routine");daily.setTextColor(INK);daily.setChecked(store.flag("daily"));schedule.addView(daily);
         scheduleText=text("",14,MUTED);schedule.addView(scheduleText);
@@ -155,11 +155,11 @@ public final class MainActivity extends Activity {
         page.addView(text("You can also apply these selections by starting a task. Changes during a run apply on its next start.",12,MUTED));
     }
     private void buildAbout() {
-        usePage(ABOUT);pageTitle("About","NusukConnec · Version "+versionName());
-        LinearLayout author=card();heading(author,"NusukConnec");author.addView(text("By ruhulamin34@gmail.com",15,INK));space(author,8);
+        usePage(ABOUT);pageTitle("About","NusukConnect · Version "+versionName());
+        LinearLayout author=card();heading(author,"NusukConnect");author.addView(text("By ruhulamin34@gmail.com",15,INK));space(author,8);
         author.addView(text("Your task : done by Apps",18,GREEN));space(author,6);author.addView(text("Generate Code, Add Keys, Find Quiz Answer through ChatGPT and Submit",14,MUTED));space(page,16);
         LinearLayout disclaimer=card();heading(disclaimer,"Disclaimer");
-        note(disclaimer,"Independent companion","NusukConnec is an independent automation helper. It is not an official Nusuk, Nusuk Codes or OpenAI product, and is not affiliated with or endorsed by their owners.");
+        note(disclaimer,"Independent companion","NusukConnect is an independent automation helper. It is not an official Nusuk, NusukCodes or OpenAI product, and is not affiliated with or endorsed by their owners.");
         note(disclaimer,"AI answers and guesses","ChatGPT replies and fallback guesses can be wrong. Correct answers, rewards, keys and uninterrupted operation are not guaranteed. Enable answer confirmation if you want to review a suggestion before submission.");
         note(disclaimer,"Automation and your account","A run can spend quiz keys and submit answers on your behalf. Use accounts you are authorized to control and follow the target apps' rules. Review your task and settings before starting. Use Stop to pause the run.");
         note(disclaimer,"Privacy","Only quiz questions and choices are sent to ChatGPT through verified Temporary Chat. Generated codes and passwords are not sent. Local settings and run logs remain on this phone. ChatGPT controls how Temporary Chat data is handled; this is not a promise of zero server retention.");
@@ -219,8 +219,8 @@ public final class MainActivity extends Activity {
             .setNegativeButton("No, I'll submit",(dialog,which)->{service.approveAnswer(token,false);finish();}).create();answerConfirmation.show();
     }
     private void showAccessibilityDisclosure() {
-        new AlertDialog.Builder(this).setTitle("Allow NusukConnec to operate Nusuk, Codes and ChatGPT?")
-            .setMessage("The Accessibility service operates Nusuk, Nusuk Codes and ChatGPT: it enters generated codes, spends quiz keys and submits answers on your behalf. AI mode verifies Temporary Chat before sending the question and four choices, then reads the reply. No prompt is sent if Temporary Chat is not verified. Sign into ChatGPT yourself. Generated codes and passwords are not sent. Stop from the app or its notification, or disable Accessibility in Android settings.\n\nEnable NusukConnec yourself on the next screen. If Android shows Restricted settings, follow Android's app-info instructions.")
+        new AlertDialog.Builder(this).setTitle("Allow NusukConnect to operate Nusuk, Codes and ChatGPT?")
+            .setMessage("The Accessibility service operates Nusuk, NusukCodes and ChatGPT: it enters generated codes, spends quiz keys and submits answers on your behalf. AI mode verifies Temporary Chat before sending the question and four choices, then reads the reply. No prompt is sent if Temporary Chat is not verified. Sign in to ChatGPT yourself. Generated codes and passwords are not sent. Stop from the app or its notification, or disable Accessibility in Android settings.\n\nEnable NusukConnect yourself on the next screen. If Android shows Restricted settings, follow Android's app-info instructions.")
             .setNegativeButton("Cancel",null).setPositiveButton("Open settings",(dialog,which)->startActivity(new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))).show();
     }
     private GradientDrawable background(int color,int radius) {GradientDrawable shape=new GradientDrawable();shape.setColor(color);shape.setCornerRadius(dp(radius));return shape;}
